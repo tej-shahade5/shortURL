@@ -13,7 +13,7 @@ const LinkResult = ({inputValue}) => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const res = await axios(`https://api.shrtco.de/v2/shorten?url=${inputValue}`);
+        const res = await axios(`https://ulvis.net/api/v1/shorten?url=${inputValue}`);
         setShortenLink(res.data.result.full_short_link);
       } catch(err) {
         setError(err);
